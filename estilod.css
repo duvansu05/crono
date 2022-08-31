@@ -1,0 +1,144 @@
+body{
+    font-family: 'Black Ops One', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+.general{
+    background-color: rgb(14, 21, 140);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+ 
+}
+
+.holograma{
+    width: 600px;
+    height: 600px;
+    border-radius: 20px;
+    background-image: url(imagenes/holo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+   
+   
+}
+
+#pantalla{
+    position: relative;
+    text-align: center;
+    top: 243px;
+    align-items: center;
+    display: none;
+   
+}
+
+.botones{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px;
+    margin: 0px 180px;
+    cursor: pointer;
+    height: 80px;
+    border-radius: 50px;
+    outline: inherit;
+    position: relative;
+    top: 290px;
+}
+
+#milisegundos, #segundo, #minuto, #hora{
+    -webkit-text-stroke: 0.3px white;
+    font-weight: 300;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 0.3); 
+    text-shadow: 1px 1px 15px aqua;
+    
+     
+}
+
+#minuto, #segundo{
+    margin-left: 51px;
+    margin-right: 51px;
+    font-size: 35px;
+   
+}
+
+button:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+    background-color: rgb(10, 21, 51);
+    box-shadow:  1px 1px 9px aqua;
+    color: aqua;
+    text-shadow:1px 1px 9px white;
+ 
+
+}
+button{
+    border-radius: 50px;
+    border-color: aqua;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    color: rgb(10, 21, 51);
+    font-weight: bold;
+    text-shadow:1px 1px 9px aqua;
+    font-size: 30px;
+}
+#grande{
+    position: absolute;
+    left: 40%;
+    top: -15%;
+    animation: rotacion 3600s linear infinite;
+    animation-play-state: paused;
+   
+}
+@keyframes rotacion {
+    from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+.uno{
+    margin-top: 0px;
+    margin-bottom: 14px;
+  
+}    
+#granMin{
+    position: absolute;
+    left: 31%;
+    top: 40%;
+    animation: rotacion 60s linear infinite;
+    animation-play-state: paused;
+    height: 43%;
+ }
+#granSeg{
+    position: absolute;
+    right: 31%;
+    top: 40%;
+    animation: rotacion 1s linear infinite;
+    animation-play-state: paused;
+    height: 43%;
+}
+#granMil{
+    position: absolute;
+    left: 44.5%;
+    top: 67%;
+    animation: rotacion 0.5s linear infinite;
+    animation-play-state: paused;
+    height: 40%;
+}
+#milisegundos{
+    font-size: 30px;
+}
+#minuto{
+    position: absolute;
+    left: 144px;
+}
+#segundo{
+    position: relative;
+    left: 81px;
+}
